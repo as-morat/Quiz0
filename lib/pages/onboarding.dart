@@ -21,42 +21,45 @@ class _OnboardingState extends State<Onboarding> {
             width: size.width,
             child: Image.network(
               "https://wallpaperbat.com/img/456044-education-wallpaper.jpg",
-            fit: BoxFit.cover,
+              fit: BoxFit.cover,
             ),
           ),
-          Center(
-            child: Image.asset("assets/logo.png", color: Colors.deepOrange,),
+
+          Align(
+            alignment: Alignment.center,
+            child: Image.asset(
+              "assets/logo.png",
+              color: Colors.deepOrange,
+              width: size.width,
+            ),
           ),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 80),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.amber.shade100,
-                      elevation: 8,
-                      shadowColor: Colors.amber.shade100,
-                      minimumSize: Size(size.width / 1.5, 60),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                    ),
-                    onPressed: () {
-                      context.go('/home');
-                    },
-                    child: const Text(
-                      "Start Playing",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
+
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 80),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.amber.shade100,
+                  elevation: 5,
+                  shadowColor: Colors.amber.shade100,
+                  minimumSize: Size(size.width / 1.5, 60),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-              ],
+                onPressed: () {
+                  context.go('/home');
+                },
+                child: const Text(
+                  "Start Playing",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
             ),
           ),
         ],
