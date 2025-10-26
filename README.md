@@ -13,14 +13,12 @@ A Flutter quiz application designed to make learning fun and interactive.
 ### Onboarding Screen (Landscape)
 <img src="img.png" alt="Onboarding Screen" width="800px">
 
-### Home Screen (Portrait)
-<img src="img_1.png" alt="Home Screen" width="400px">
-
-### Quiz Screen (Portrait)
-<img src="img_2.png" alt="Quiz Screen" width="400px">
-
-### Scoreboard (Portrait)
-<img src="img_3.png" alt="Scoreboard" width="400px">
+### Portrait Screens (Home, Quiz, Scoreboard)
+<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+  <img src="img_1.png" alt="Home Screen" width="200px">
+  <img src="img_2.png" alt="Quiz Screen" width="200px">
+  <img src="img_3.png" alt="Scoreboard" width="200px">
+</div>
 
 ## Getting Started
 
