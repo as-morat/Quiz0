@@ -12,14 +12,27 @@ ButtonStyle myButton() {
 
   );
 }
-Widget buildButton(String title, double width, double height) {
+
+TextStyle myText(double size, {FontWeight? weight}){
+  return TextStyle(
+    fontSize: size,
+    fontWeight: weight
+  );
+}
+
+Widget myButtonStyle(String title, VoidCallback? onPressed) {
   return SizedBox(
-    width: width,
-    height: height,
+    height: 50,
+    width: 120,
     child: ElevatedButton(
-      onPressed: () {},
-      style: myButton(),
-      child: Text(title,),
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+      ),
+      child: Text(title),
     ),
   );
 }
