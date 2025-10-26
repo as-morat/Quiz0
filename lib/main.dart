@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quizo/pages/home.dart';
 import 'package:quizo/pages/onboarding.dart';
+import 'package:quizo/pages/quiz.dart';
 
 void main() {
   final GoRouter router = GoRouter(
@@ -14,6 +15,13 @@ void main() {
       GoRoute(
         path: '/home',
         builder: (context, state) => const Home(),
+      ),
+      GoRoute(
+        path: '/quiz/:category',
+        builder: (context, state) {
+          final name = state.pathParameters['category']!;
+          return Quiz(categoryName: name);
+        },
       ),
     ],
   );
